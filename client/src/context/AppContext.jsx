@@ -20,7 +20,7 @@ const AppContextProvider = ({ children }) => {
       } else if (Array.isArray(response.data)) {
         setUser(response.data);
       } else {
-        setUser([]); // fallback empty array
+        setUser([]); 
       }
     } catch (error) {
       console.error("Failed to fetch residents:", error);
