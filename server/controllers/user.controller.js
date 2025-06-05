@@ -10,7 +10,7 @@ const addUser = async(req, res) => {
         console.log(err)
         res.status(500).json({
             msg: "error while creating profile",
-            error: err.message  // This will provide more specific error details
+            error: err.message  
         })
     }
 }
