@@ -3,24 +3,23 @@ const connectToDB = require("./config/config.db");
 const userRouter = require("./routes/user.route");
 const multer = require("multer");
 const cors = require("cors");
-const path = require("path"); // You need this for `path.extname`
+const path = require("path");
 require('dotenv').config();
 
 const PORT = process.env.PORT || 8000;
-const BASE_IMAGE_URL = process.env.BASE_IMAGE_URL || ''; // Optional default
+const BASE_IMAGE_URL = process.env.BASE_IMAGE_URL || ''; 
 
 const app = express();
 
-// ✅ Enable CORS BEFORE defining routes
 app.use(cors({
-  origin: "https://user-management-pi-henna.vercel.app", // Allow Vite frontend
+  origin: "https://user-management-pi-henna.vercel.app", 
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true // If using cookies/auth
+  credentials: true 
 }));
 
 app.use(express.json());
 
-// Multer setup
+
 const storage = multer.diskStorage({
   destination: "./upload/images",
   filename: (req, file, cb) => {
@@ -30,10 +29,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Static route for uploaded images
+
 app.use("/images", express.static("upload/images"));
 
-// Upload endpoint
+
 app.post("/upload", upload.single("user"), (req, res) => {
   const imageHost = BASE_IMAGE_URL || `${req.protocol}://${req.get("host")}`;
   res.json({
@@ -42,10 +41,10 @@ app.post("/upload", upload.single("user"), (req, res) => {
   });
 });
 
-// API route
+
 app.use("/profiles", userRouter);
 
-// Server start
+
 app.listen(PORT, async () => {
   try {
     await connectToDB();
