@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* ===== MAIN CONTAINER ===== */
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -20,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== HEADER STYLES ===== */
+
 .header {
   text-align: center;
   margin-bottom: 40px;
@@ -40,7 +39,7 @@ body {
   font-weight: 400;
 }
 
-/* ===== BUTTON STYLES ===== */
+
 .add-resident-btn {
   display: block;
   margin: 0 auto 40px;
@@ -66,7 +65,7 @@ body {
   transform: translateY(0);
 }
 
-/* ===== EMPTY STATE ===== */
+
 .empty-state {
   text-align: center;
   background: white;
@@ -95,7 +94,7 @@ body {
   font-size: 1rem;
 }
 
-/* ===== RESIDENT CARDS GRID ===== */
+
 .resident-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -182,7 +181,7 @@ body {
   border-color: #3182ce;
 }
 
-/* ===== MODAL STYLES ===== */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -285,7 +284,7 @@ body {
   color: #a0aec0;
 }
 
-/* ===== FORM BUTTONS ===== */
+
 .form-buttons {
   display: flex;
   gap: 16px;
@@ -326,9 +325,9 @@ body {
   box-shadow: 0 6px 16px rgba(49, 130, 206, 0.4);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablet styles */
+
+
 @media (max-width: 768px) {
   .app {
     padding: 24px 16px;
@@ -357,7 +356,7 @@ body {
   }
 }
 
-/* Mobile styles */
+
 @media (max-width: 480px) {
   .app {
     padding: 20px 12px;
@@ -408,7 +407,7 @@ body {
   }
 }
 
-/* Extra small mobile */
+
 @media (max-width: 320px) {
   .modal-content {
     padding: 20px;
