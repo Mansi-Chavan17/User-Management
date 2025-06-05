@@ -13,7 +13,7 @@ const app = express();
 
 // ✅ Enable CORS BEFORE defining routes
 app.use(cors({
-  origin: "http://localhost:5173", // Allow Vite frontend
+  origin: "https://user-management-pi-henna.vercel.app", // Allow Vite frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true // If using cookies/auth
 }));
